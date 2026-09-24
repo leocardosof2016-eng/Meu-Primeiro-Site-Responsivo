@@ -53,7 +53,7 @@ footer{
     margin:20px;
 }
 
-.card img{
+img{
     width: 150px;
     height: auto;
     border-radius: 4px;
@@ -87,17 +87,117 @@ footer{
     font-size: 15px;
 }
 
+/* PERSONALIZAÇÃO DO BOTÃO DE PEDIDO */
+.btn_comprar{
+    width:90%;
+    height:35px;
+    margin-top:10px;
+    font: bold, Arial;
+    font-size: 18px;
+    color:white;
+    background-color:#27ae60;
+    border-radius:5px;
+    border-color:#1e8348;
+    cursor: pointer;
+
+    .btn_comprar:hover{
+        background-color:#13532e;
+    }
+
+}
+
+/* PERSONALIZAÇÃO DO MODAL E CONTEÚDO */
+#modal_frame{
+    display: none;
+    position: fixed;
+    z-index: 1;     /*Coloca o modal em uma camada superior em relação aos outros elementos*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+    }
+}
+
+.modal_content{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+
+.fechar_modal{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #8d8d8d;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+
+    .fechar-modal:hover {
+        color: black;
+    }
+}
+
+#info_livro{
+    margin-top: 10px 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+#telefone_cliente{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#btn_confirmar{
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+
+    #btn-confirmar:hover {
+    background-color: #1ebe5d;
+    }
+}
+
+
+
 /*Breakpoints de media queries:
 max-width == 900 --> grid-template-columns: repeat(2, 1fr);
 max-width == 600 --> grid-template-columns: repeat(1, 1fr);
 */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .container_cards{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .container_cards{
         grid-template-columns: repeat(1, 1fr);
     }
