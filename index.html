@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
 <body>
     
-    <header>Minha Biblioteca Responsa</header>
+    <header>Minha Biblioteca Responsiva</header>
 
     <main>
         <ul class="container_cards">
@@ -18,40 +17,67 @@
                 <p class="titulo"><strong>Título: </strong><a href="https://pt.wikipedia.org/wiki/Dom_Casmurro">Dom Casmurro</a></p>
                 <p class="autor"><strong>Autor: </strong>Machado de Assis</p>
                 <p class="ano">1899</p>
+                <button class="btn_comprar" data-titulo="Dom Casmurro" data-autor="Machado de Assis" data-imagem="imagens/dom_casmurro_capa.jpg">
+                    Solicitar Livro</button>
             </li>
             <li class="card">
                 <img src="imagens/torto_arado_capa.jpg"  alt="">
                 <p class="titulo"><strong>Título: </strong><a href="https://pt.wikipedia.org/wiki/Torto_Arado">Torto Arado</a></p>
                 <p class="autor"><strong>Autor: </strong>Itamar Vieira Júnior</p>
                 <p class="ano">2019</p>
+                <button class="btn_comprar" data-titulo="Torto Arado" data-autor="Itamar Vieira Júnior" data-imagem="imagens/torto_arado_capa.jpg">
+                    Solicitar Livro</button>
             </li>
             <li class="card">
                 <img src="imagens/1984_capa.jpg"  alt="">
                 <p class="titulo"><strong>Título: </strong><a href="https://pt.wikipedia.org/wiki/1984_(livro)">1984</a></p>
                 <p class="autor"><strong>Autor: </strong>George Orwell</p>
                 <p class="ano">1949</p>
+                <button class="btn_comprar" data-titulo="1984" data-autor="George Orwell" data-imagem="imagens/1984_capa.jpg">
+                    Solicitar Livro</button>
             </li>
             <li class="card">
                 <img src="imagens/senhor_aneis_capa.jpg"  alt="">
                 <p class="titulo"><strong>Título: </strong><a href="https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is">O Senhor dos Anéis</a></p>
                 <p class="autor"><strong>Autor: </strong>J. R. R. Tolkien</p>
                 <p class="ano">1954</p>
+                <button class="btn_comprar" data-titulo="O Senhor dos Anéis" data-autor="J. R. R. Tolkien" data-imagem="imagens/senhor_aneis_capa.jpg">
+                    Solicitar Livro</button>
             </li>
             <li class="card">
                 <img src="imagens/cabeca_java_capa.jpg"  alt="">
-                <p class="titulo"><strong>Título: </strong><a href="https://www.amazon.com.br/Use-Cabe%C3%A7a-Java-Aprendiz-Programa%C3%A7%C3%A3o/dp/8550819883">Use a cabeça Java</a></p>
+                <p class="titulo"><strong>Título: </strong><a href="https://www.amazon.com.br/Use-Cabe%C3%A7a-Java-Aprendiz-Programa%C3%A7%C3%A3o/dp/8550819883">Use a cabeça! Java</a></p>
                 <p class="autor"><strong>Autor: </strong>Kathy Sierra, Bert Bates & Trisha Gee</p>
                 <p class="ano">2004</p>
+                <button class="btn_comprar" data-titulo="Use a Cabeça! Java" data-autor="Kathy Sierra, Bert Bates & Trisha Gee" data-imagem="imagens/cabeca_java_capa.jpg">
+                    Solicitar Livro</button>
             </li>
             <li class="card">
                 <img src="imagens/cabeca_python_capa.jpg"  alt="">
-                <p class="titulo"><strong>Título: </strong><a href="https://www.amazon.com.br/Use-cabe%C3%A7a-Python-aprendizagem-fundamentos/dp/8550826871">Use a cabeça Python</a></p>
+                <p class="titulo"><strong>Título: </strong><a href="https://www.amazon.com.br/Use-cabe%C3%A7a-Python-aprendizagem-fundamentos/dp/8550826871">Use a cabeça! Python</a></p>
                 <p class="autor"><strong>Autor: </strong>Paul Barry</p>
                 <p class="ano">2025 - 3ª Edição</p>
+                <button class="btn_comprar" data-titulo="Use a cabeça! Python" data-autor="Paul Barry" data-imagem="imagens/cabeca_python_capa.jpg">
+                    Solicitar Livro</button>
             </li>  
         </ul>
     </main>
 
+    <div id="modal_frame">
+        <div class="modal_content">
+            <span class="fechar_modal">&times;</span>
+            <h2>Solicitar Compra</h2>
+            <img class="imagem_modal" src="">
+            <p id="info_livro"></p>
+
+            <label for="telefone_cliente">Seu Contato Whatsapp:</label>
+            <input type="text" id="telefone_cliente" placeholder="(XX) 9XXXX-XXXX">
+            <button id="btn_confirmar">Confirmar pedido</button>
+        </div>
+    </div>
+
     <footer>&copy; 2026 - Aplicação realizada na matéria de Front-End</footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
